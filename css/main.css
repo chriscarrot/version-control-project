@@ -124,6 +124,18 @@ body {
     clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 0 50%, 0% 0%);
     display: grid;
     grid-template-rows: .875fr 2fr .875fr;
+}
+
+.main div.image {
+    min-height: 96vh;
+    min-width: 60vw;
+    background-image: url("https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    display: grid;
+    grid-template-rows: .875fr 2fr .875fr;
 
 }
 
