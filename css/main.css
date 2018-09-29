@@ -315,6 +315,7 @@ clip-path: none;
 }
     nav h1 {
         display: none;
+        transition: .2s;
     }
 
     section {
