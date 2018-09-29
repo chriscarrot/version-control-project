@@ -106,15 +106,29 @@ body {
     scroll-behavior: smooth;
     background-color: rgb(0, 14, 27);
 }
+nav {
+    background-color: rgba(15, 15, 15, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#menutop i {
+    display: none;
+}
+
+nav h1{
+    margin: 0vw .5vw;
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(16px + 2vw);
+    color: rgba(16, 212, 137, 0.85);
+    text-align: center;
+}
 
 .navbar {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-color: rgba(16, 212, 137, 0.85);
-    position: fixed;
-    z-index: 100;
-    width: 99vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
     filter: drop-shadow(0 0 50px black);
 }
@@ -122,18 +136,30 @@ body {
 .navbar a {
     margin: 4px 2px;
     padding: 16px 5px;
-    background-color: rgba(16, 212, 137, 0.85);
+    background-color: rgba(15, 15, 15, 0.5);
     text-decoration: none;
-    color: rgb(15, 15, 15);
+    color: white;
     font-family: 'Roboto', sans-serif;
     vertical-align: middle;
+    transition: .2s;
+    border: rgba(255, 255, 255, 0.25) 1px solid;
+}
+
+.navbar a:hover {
+    background-color: rgba(16, 212, 137, 0.85);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .main {
     display: grid;
     grid-template-columns: 1fr;
 }
-
+.main div.image:first-of-type {
+    height: 980px;
+    margin-top: -180px;
+    grid-template-rows: 1fr 2fr .5fr;
+}
 .main div.image {
     height: 800px;
     width: 99vw;
@@ -188,28 +214,21 @@ section {
     margin: .5vw 2vw 3vw;
     display: grid;
     grid-gap: 2vw;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 section h1 {
-    transform: rotate(-2deg);
     background-color: rgb(255, 102, 0);
-    padding-left: 60px;
+    padding-left: 2vw;
     margin: .5vw 0;
-    margin-left: -60px;
     font-family: 'Roboto Slab', serif;
     font-size: calc(32px + 2vw);
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
-    /* border-bottom: 5px solid rgb(255, 102, 0); */
 }
 
-section h1:last-of-type {
-    margin-right: -80px;
-}
 
 section p {
-    transform: rotate(-2deg);
     margin: .5vw 0;
     font-family: 'Roboto', sans-serif;
     font-size: calc(12px + .4vw);
@@ -219,9 +238,110 @@ section p {
     padding: 2vw;
 }
 
+article {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(12px + .4vw);
+    color: white;
+    border: 2px rgb(255, 102, 0) solid;
+    background-color: rgb(15, 15, 15);
+    padding: 2vw;
+    margin: .5vw 2vw 3vw;
+}
+
+article h1 {
+    padding-left: 2vw;
+    background-color: rgb(255, 102, 0);
+    margin: .5vw 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(32px + 2vw);
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+}
+
+@media only screen and (max-width: 900px) {
+
+    .main {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .textbox {
+        margin-right: 40px;
+    }
+
+    .navbar {
+        display: grid;
+        grid-gap: 2px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        filter: drop-shadow(0 0 10px black);
+        position: fixed;
+        left: -180px;
+        text-align: left;
+        transition: .2s;
+        background-color: rgb(15, 15, 15);
+        height: 100%;    }
 
 
+    .navbar:hover {
+        position: fixed;
+        left: -0px;
+    }
 
+    .navbar a {
+        font-size: 32px;
+        margin: 2px;
+        padding-bottom: -10vw;
+        background-color: rgba(15, 15, 15, 0.5);
+        text-decoration: none;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        vertical-align: middle;
+        transition: .2s;
+        border: none;
+        height: 50%;
+    }
+
+.main div.image {
+    height: 400px;
+    width: 99vw;
+    background-image: url("https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-clip-path: none;
+clip-path: none;
+    display: grid;
+    grid-template-rows: .875fr 2fr .875fr;
+}
+    nav h1 {
+        display: none;
+    }
+
+    section {
+        position: relative;
+        top: -180px;
+        grid-template-columns: 1fr;
+        margin-right: 60px;
+    }
+
+    article {
+        position: relative;
+        top: -180px;
+        margin-right: 60px;
+    }
+    .main div.image:not(:first-of-type) {
+        position: relative;
+        top: -180px;
+    }
+
+    #menutop {
+        text-align: right;
+    }
+
+    #menutop i {
+        display: inline;
+    }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
