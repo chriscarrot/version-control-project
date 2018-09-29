@@ -234,6 +234,7 @@ section p {
     font-size: calc(12px + .4vw);
     color: white;
     border: 2px rgb(255, 102, 0) solid;
+    border-bottom: 8px rgb(255, 102, 0) solid;
     background-color: rgb(15, 15, 15);
     padding: 2vw;
 }
@@ -243,6 +244,7 @@ article {
     font-size: calc(12px + .4vw);
     color: white;
     border: 2px rgb(255, 102, 0) solid;
+    border-bottom: 8px rgb(255, 102, 0) solid;
     background-color: rgb(15, 15, 15);
     padding: 2vw;
     margin: .5vw 2vw 3vw;
