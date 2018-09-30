@@ -14,3 +14,10 @@ $(window).scroll(function() {
 		});
     }
 });
+
+
+// Dropdown Menu
+var urlmenu = document.getElementById( 'menu' );
+urlmenu.onchange = function() {
+     window.open( this.options[ this.selectedIndex ].value );
+};

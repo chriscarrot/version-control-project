@@ -120,7 +120,6 @@ nav {
 nav h1{
     margin: 0vw .5vw;
     font-family: 'Roboto Slab', serif;
-    font-size: calc(16px + 2vw);
     color: rgba(16, 212, 137, 0.85);
     text-align: center;
 }
@@ -210,10 +209,21 @@ nav h1{
 }
 
 section {
-    margin: .5vw 2vw 3vw;
+    margin: .5vw 2vw 1vw;
     display: grid;
     grid-gap: 2vw;
     grid-template-columns: 1fr 1fr;
+}
+
+section div {
+    margin: .5vw 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(12px + .4vw);
+    color: white;
+    border: 2px rgb(255, 102, 0) solid;
+    border-bottom: 8px rgb(255, 102, 0) solid;
+    background-color: rgb(15, 15, 15);
+    padding: 2vw;
 }
 
 section h1 {
@@ -226,16 +236,19 @@ section h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
 }
 
-
-section p {
-    margin: .5vw 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: calc(12px + .4vw);
-    color: white;
+img {
+    width: 45%;
+    float: left;
+    margin-right: 1vw;
+    margin-top: 1vw;
     border: 2px rgb(255, 102, 0) solid;
-    border-bottom: 8px rgb(255, 102, 0) solid;
-    background-color: rgb(15, 15, 15);
-    padding: 2vw;
+    padding: .5vw;
+}
+
+article img {
+    width: 30%;
+    float: right;
+    margin-left: 1vw;
 }
 
 article {
@@ -246,7 +259,7 @@ article {
     border-bottom: 8px rgb(255, 102, 0) solid;
     background-color: rgb(15, 15, 15);
     padding: 2vw;
-    margin: .5vw 2vw 3vw;
+    margin: .5vw 2vw 1vw;
 }
 
 article h1 {
@@ -276,11 +289,18 @@ select {
     width: 80vw;
     }
 
-
-
     .navbar {
         display: none;
     }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    article img {
+        width: 45%;
+    }
+    
 }
 /* ==========================================================================
    Helper classes
