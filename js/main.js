@@ -10,7 +10,7 @@ $(window).scroll(function() {
 $(window).scroll(function() {
     if ($(this).scrollTop() < 100) { //use `this`, not `document`
         $('nav h1').css({
-            'opacity': '1', 'font-size':'60px'
+            'opacity': '1', 'font-size':'48px'
 		});
     }
 });
