@@ -119,6 +119,7 @@ nav {
 
 nav h1{
     margin: 0vw .5vw;
+    font-size: 48px;
     font-family: 'Roboto Slab', serif;
     color: rgba(16, 212, 137, 0.85);
     text-align: center;
@@ -137,17 +138,19 @@ nav h1{
     padding: 16px 5px;
     background-color: rgba(15, 15, 15, 0.5);
     text-decoration: none;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    color: rgb(16, 212, 137);
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
     vertical-align: middle;
     transition: .2s;
-    border: rgba(255, 255, 255, 0.25) 1px solid;
+    border: rgba(16, 212, 137, 0.85) 2px solid;
 }
 
 .navbar a:hover {
-    background-color: rgba(16, 212, 137, 0.85);
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    background-color: rgb(15, 15, 15);
+    color: rgb(255, 102, 0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border: white 2px solid;
 }
 
 .main {
