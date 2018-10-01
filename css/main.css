@@ -159,9 +159,9 @@ nav h1{
 }
 .main div.image:first-of-type {
     height: 980px;
+    margin-top: -180px;
     grid-template-rows: 1fr 2fr .5fr;
 }
-
 .main div.image {
     height: 800px;
     background-image: url("https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -275,67 +275,24 @@ article h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    background-color: transparent;
-    color: rgb(16, 212, 137);
-    font-family: 'Roboto Slab', serif;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+select {
     display: none;
-    border: 2px rgb(16, 212, 137) solid;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion.active, .accordion:hover {
-    background-color: transparent;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-}
-
-.panel a {
-    display: block;
-    background-color: transparent;
-    color: rgb(16, 212, 137);
-    font-family: 'Roboto Slab', serif;
-    border: 2px rgb(16, 212, 137) solid;
-    padding: 5px;
-    margin: 5px;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: .2s;
-    display: none;
-}
-
-.panel a:hover {
-    border: 2px solid white;
-    color: rgb(255, 102, 0);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 @media only screen and (max-width: 900px) {
 
-.accordion {
+    select {
     display: block;
-}
-
-.panel {
-    display: block;
-}
-
-.panel a {
-    display: block;
-}
+    background-color: rgb(15, 15, 15);
+    border: 2px rgba(16, 212, 137, 0.85) solid;
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(16px + 1vw);
+    color: rgba(16, 212, 137, 0.85);
+    text-align: center;
+    padding: .5vw;
+    margin: 0px auto;
+    width: 80vw;
+    }
 
     .navbar {
         display: none;
@@ -348,13 +305,7 @@ article h1 {
     article img {
         width: 45%;
     }
-
-    .main div.image:first-of-type {
-        height: 980px;
-        margin-top: 0;
-        grid-template-rows: 1fr 2fr .5fr;
-    }
-
+    
 }
 /* ==========================================================================
    Helper classes
