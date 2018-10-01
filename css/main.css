@@ -106,6 +106,7 @@ body {
     scroll-behavior: smooth;
     background-color: rgb(0, 14, 27);
 }
+
 nav {
     background-color: rgba(15, 15, 15, 0.75);
     position: sticky;
@@ -117,7 +118,7 @@ nav {
     display: none;
 }
 
-nav h1{
+nav h1 {
     margin: 0vw .5vw;
     font-size: 48px;
     font-family: 'Roboto Slab', serif;
@@ -157,11 +158,13 @@ nav h1{
     display: grid;
     grid-template-columns: 1fr;
 }
+
 .main div.image:first-of-type {
     height: 980px;
     margin-top: -180px;
     grid-template-rows: 1fr 2fr .5fr;
 }
+
 .main div.image {
     height: 800px;
     background-image: url("https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -236,7 +239,7 @@ section h1 {
     font-family: 'Roboto Slab', serif;
     font-size: calc(32px + 2vw);
     color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 img {
@@ -272,26 +275,67 @@ article h1 {
     font-family: 'Roboto Slab', serif;
     font-size: calc(32px + 2vw);
     color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 select {
     display: none;
 }
 
+.dropdown {
+    display: none;
+}
+
 @media only screen and (max-width: 900px) {
 
-    select {
-    display: block;
-    background-color: rgb(15, 15, 15);
-    border: 2px rgba(16, 212, 137, 0.85) solid;
-    font-family: 'Roboto Slab', serif;
-    font-size: calc(16px + 1vw);
-    color: rgba(16, 212, 137, 0.85);
-    text-align: center;
-    padding: .5vw;
-    margin: 0px auto;
-    width: 80vw;
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 4px auto;
+        padding: 10px 16px;
+        background-color: rgba(15, 15, 15, 0.5);
+        text-decoration: none;
+        color: rgb(16, 212, 137);
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+        vertical-align: middle;
+        transition: .2s;
+        border: rgba(16, 212, 137, 0.85) 2px solid;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: -2px;
+        padding: 0 10px;
+        background-color: rgba(15, 15, 15, 0.5);
+        text-decoration: none;
+        color: rgb(16, 212, 137);
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+        transition: .2s;
+        border: rgba(16, 212, 137, 0.85) 2px solid;
+        width: calc(200px + 20vw);
+    }
+
+    .dropdown-content a {
+        margin: 8px;
+        padding: 8px;
+        display: block;
+        text-align: left;
+        background-color: rgb(15, 15, 15);
+        text-decoration: none;
+        color: rgb(16, 212, 137);
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+        transition: .2s;
+        border: rgba(16, 212, 137, 0.85) 2px solid;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .navbar {
@@ -305,8 +349,9 @@ select {
     article img {
         width: 45%;
     }
-    
+
 }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
