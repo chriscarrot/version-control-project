@@ -1,11 +1,23 @@
-$(function() {
-	$('ul.nav a').bind('click',function(event){
-		var $anchor = $(this);
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) { //use `this`, not `document`
+        $('nav h1').css({
+            'opacity': '0', 'transition':'.2s', 'font-size':'0px'
+		});
 
-		$('html, body').stop().animate({
-			scrollTop: $($anchor.attr('href')).offset().top
-		}, 1500,'easeInOutExpo');
-
-		event.preventDefault();
-	});
+    }
 });
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() < 100) { //use `this`, not `document`
+        $('nav h1').css({
+            'opacity': '1', 'font-size':'48px'
+		});
+    }
+});
+
+
+// Dropdown
+var urlmenu = document.getElementById( 'menu' );
+urlmenu.onchange = function() {
+     window.open( this.options[ this.selectedIndex ].value );
+};
