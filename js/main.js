@@ -16,10 +16,3 @@ $(window).scroll(function () {
         });
     }
 });
-
-
-// Dropdown
-var urlmenu = document.getElementById('menu');
-urlmenu.onchange = function () {
-    window.open(this.options[this.selectedIndex].value);
-};
