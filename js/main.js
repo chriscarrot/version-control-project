@@ -1,5 +1,5 @@
 $(window).scroll(function () {
-    if ($(this).scrollTop() < 40) {
+    if ($(this).scrollTop() < 90) {
         $('nav h1').css({
             'transition': '1s',
             'font-size': '48px'
