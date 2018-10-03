@@ -278,6 +278,21 @@ article h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
+article a {
+    border: 2px rgb(16, 212, 137) solid;
+    border-radius: 32px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: .2s;
+    font-family: 'Roboto Slab',
+        serif;
+}
+
+article a:hover {
+    border-color: rgb(255, 102, 0);
+}
+
 select {
     display: none;
 }
