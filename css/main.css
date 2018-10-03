@@ -287,6 +287,8 @@ article a {
     transition: .2s;
     font-family: 'Roboto Slab',
         serif;
+    display: block;
+    width: 50%;
 }
 
 article a:hover {
