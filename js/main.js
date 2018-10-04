@@ -1,3 +1,4 @@
+// Show header above 50px on scroll
 $(window).scroll(function () {
     if ($(this).scrollTop() < 50) {
         $('nav h1').css({
@@ -8,6 +9,7 @@ $(window).scroll(function () {
     }
 });
 
+// Hide header below 150px on scroll
 $(window).scroll(function () {
     if ($(this).scrollTop() > 150) {
         $('nav h1').css({
