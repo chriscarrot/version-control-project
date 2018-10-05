@@ -311,6 +311,10 @@ article a {
     width: 50%;
 }
 
+.cite {
+    word-break: break-all;
+}
+
 article a:hover {
     border-color: rgb(255, 102, 0);
 }
@@ -395,10 +399,6 @@ article a:hover {
     /* Article images larger on mobile. */
     article img {
         width: 45%;
-    }
-
-    article a {
-        width: 35%;
     }
 
 }
