@@ -1,6 +1,7 @@
 /*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -324,6 +325,23 @@ article a:hover {
     display: none;
 }
 
+blockquote {
+    background-color: rgb(15, 15, 15);
+    padding: 4vw 8vw;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-size: calc(16px + 1.8vw);
+}
+
+blockquote span {
+    font-size: calc(52px + 4vw);
+    margin: -20px;
+    margin-right: 1.2vw;
+    margin-bottom: -4vw;
+    color: rgb(255, 102, 0);
+    float: left;
+    font-family: 'Arbutus Slab', serif;
+}
 
 /* Media tag for tablets and smartphones. */
 @media only screen and (max-width: 900px) {
