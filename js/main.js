@@ -1,23 +1,31 @@
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 100) { //use `this`, not `document`
+// Show header above 50px on scroll
+$(window).scroll(function () {
+    if ($(this).scrollTop() < 50) {
         $('nav h1').css({
-            'opacity': '0', 'transition':'.2s', 'font-size':'0px'
-		});
+            'transition': '1s',
+            'font-size': '48px'
+        });
 
     }
 });
 
-$(window).scroll(function() {
-    if ($(this).scrollTop() < 100) { //use `this`, not `document`
+// Hide header below 150px on scroll
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 150) {
         $('nav h1').css({
-            'opacity': '1', 'font-size':'48px'
-		});
+            'opacity': '1',
+            'font-size': '0px'
+        });
     }
 });
 
+// Show header above 50px on scroll
+$(window).scroll(function () {
+    if ($(this).scrollTop() < 50) {
+        $('nav h1').css({
+            'transition': '1s',
+            'font-size': '48px'
+        });
 
-// Dropdown
-var urlmenu = document.getElementById( 'menu' );
-urlmenu.onchange = function() {
-     window.open( this.options[ this.selectedIndex ].value );
-};
+    }
+});

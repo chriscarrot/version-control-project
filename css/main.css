@@ -1,6 +1,7 @@
 /*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -100,17 +101,20 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+
+/* Scroll bahavior smooth on anchor click. */
 html {
- scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-
+/* Body overflow hidden, background color for page. */
 body {
     overflow-x: hidden;
-    scroll-behavior: smooth;
     background-color: rgb(0, 14, 27);
 }
 
+/* Nav sticky over page elements, nav background color. */
 nav {
     background-color: rgba(15, 15, 15, 0.75);
     position: sticky;
@@ -118,10 +122,12 @@ nav {
     z-index: 100;
 }
 
+/* Hide menu icon on large displays */
 #menutop i {
     display: none;
 }
 
+/* Nav heading */
 nav h1 {
     margin: 0vw .5vw;
     font-size: 48px;
@@ -130,6 +136,7 @@ nav h1 {
     text-align: center;
 }
 
+/* Navbar for desktop, large tablets. */
 .navbar {
     display: grid;
     grid-gap: 10px;
@@ -138,6 +145,7 @@ nav h1 {
     filter: drop-shadow(0 0 50px black);
 }
 
+/* Nav links */
 .navbar a {
     margin: 4px 2px;
     padding: 16px 5px;
@@ -147,28 +155,32 @@ nav h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     vertical-align: middle;
-    transition: .2s;
     border: rgba(16, 212, 137, 0.85) 2px solid;
 }
 
+/* Nav links hover events. */
 .navbar a:hover {
+    transition: .2s;
     background-color: rgb(15, 15, 15);
     color: rgb(255, 102, 0);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     border: white 2px solid;
 }
 
+/* Main page layout */
 .main {
     display: grid;
     grid-template-columns: 1fr;
 }
 
+/* First header banner. */
 .main div.image:first-of-type {
     height: 980px;
     margin-top: -180px;
     grid-template-rows: 1fr 2fr .5fr;
 }
 
+/* Other page banners, defaults for banner. */
 .main div.image {
     height: 800px;
     background-image: url("https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -180,12 +192,14 @@ nav h1 {
     grid-template-rows: .875fr 2fr .875fr;
 }
 
+/* Banner textbox */
 .main div.image .textbox {
     max-width: 100%;
     background-color: rgba(16, 212, 137, 0.85);
     padding: 3vw;
 }
 
+/* Banner h1, h2, and links as well as link hover events. */
 .main div.image h1 {
     margin: .5vw 0;
     font-family: 'Roboto Slab', serif;
@@ -218,6 +232,7 @@ nav h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Section layout with grids and gaps. Section margins. */
 section {
     margin: .5vw 2vw 1vw;
     display: grid;
@@ -246,6 +261,7 @@ section h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Body images. */
 img {
     width: 45%;
     float: left;
@@ -261,6 +277,7 @@ article img {
     margin-left: 1vw;
 }
 
+/* Article basic elements and layout. */
 article {
     font-family: 'Roboto', sans-serif;
     font-size: calc(12px + .4vw);
@@ -282,16 +299,62 @@ article h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-select {
-    display: none;
+article a {
+    border: 2px rgb(16, 212, 137) solid;
+    border-radius: 32px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: .2s;
+    font-family: 'Roboto Slab',
+        serif;
+    display: block;
+    width: 50%;
 }
 
+.cite {
+    word-break: break-all;
+}
+
+article a:hover {
+    border-color: rgb(255, 102, 0);
+}
+
+/* Hide drop down on mobile devices.  */
 .dropdown {
     display: none;
 }
 
+blockquote {
+    background-color: rgb(15, 15, 15);
+    padding: 4vw 8vw;
+    font-family: 'Roboto Slab', serif;
+    border: 2px rgb(255, 102, 0) solid;
+    border-bottom: 8px rgb(255, 102, 0) solid;
+    color: white;
+    font-size: calc(16px + 1.8vw);
+}
+
+blockquote h1 {
+    background-color: rgb(255, 102, 0);
+    font-size: calc(52px + 4vw);
+    color: rgb(15, 15, 15);
+    text-align: center;
+    font-family: 'Arbutus Slab', serif;
+   margin: -20px 0;
+}
+
+blockquote p {
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-size: calc(16px + 1.8vw);
+    margin-bottom: -20px;
+}
+
+/* Media tag for tablets and smartphones. */
 @media only screen and (max-width: 900px) {
 
+    /* Dropdown on mobile, layout. */
     .dropdown {
         position: relative;
         display: inline-block;
@@ -349,16 +412,23 @@ select {
         display: block;
     }
 
+    /* Hide desktop navbar. */
     .navbar {
         display: none;
     }
 
+    /* Section goes to one column. */
     section {
         grid-template-columns: 1fr;
     }
 
+    /* Article images larger on mobile. */
     article img {
         width: 45%;
+    }
+
+    article a {
+        width: 35%;
     }
 
 }
