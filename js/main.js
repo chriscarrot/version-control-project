@@ -18,3 +18,14 @@ $(window).scroll(function () {
         });
     }
 });
+
+// Show header above 50px on scroll
+$(window).scroll(function () {
+    if ($(this).scrollTop() < 50) {
+        $('nav h1').css({
+            'transition': '1s',
+            'font-size': '48px'
+        });
+
+    }
+});
